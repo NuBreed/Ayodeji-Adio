@@ -202,7 +202,7 @@ a {
 }
 
 .hero {
-    height: 70vh;
+    height: 85vh;
     /* background: url('https://cdn.pixabay.com/photo/2019/02/02/14/27/qr-code-3970681_1280.jpg'); */
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y3NzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60');
     background-repeat: no-repeat;
