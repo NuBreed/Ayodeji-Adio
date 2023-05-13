@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: auto;
+  overflow-x: hidden;
 }
 
 html {
@@ -29,21 +29,19 @@ body {
   line-height: 1.5rem;
   font-size: 1.25rem;
   background-color: rgb(241, 241, 241);
-  border: 2px solid red;
 }
 
 /* globals */
 
 .section {
-  max-width: 100%;
+  width: 100%;
   text-align: center;
-  padding: 1.25rem 0;
 }
-/* 
+
 .section-center {
   width: 90%;
   margin: 0 auto;
-} */
+}
 
 .section-title {
   font-size: 2rem;
