@@ -16,6 +16,7 @@ html {
   --primary-color-3: #ffc300;
   --primary-color-4: #ffd60a;
   --primary-color-5: #e8f1fa;
+  --primary-color-5-light: rgb(232, 241, 250, 0.7);
   --primary-white: #fff;
   --primary-black: #000;
   --font-text: 'Festive', cursive;
@@ -81,6 +82,8 @@ a {
 a:hover {
   background-color: #ffd60a;
   border-radius: 4px;
+  padding: 12px;
+  width: 100%;
 }
 @media screen and (min-width: 600px) {
   h2 {
@@ -109,6 +112,9 @@ a:hover {
   height: 50px;
   width: auto;
 }
+.nav-img:hover {
+  box-shadow: 2px 12px 64px var(--primary-color-4);
+}
 
 .fa-bars {
   font-size: 2rem;
@@ -117,13 +123,10 @@ a:hover {
 .nav-links {
   display: none;
 }
-
-.nav-links {
-  list-style: none;
-}
-
 .nav-links li {
   margin: 0.1rem;
+  text-align: start;
+  padding: 1rem 0;
 }
 
 .fa-solid {
@@ -131,43 +134,26 @@ a:hover {
   padding-right: 1rem;
 }
 
-.nav-links a:hover .fa-solid {
-  color: var(--primary-color-3);
-}
-
-.fa-arrow-up {
-  color: black;
-  padding: 0;
-  text-align: center;
-  padding: 1rem;
-  font-weight: bolder;
-  font-size: 2rem;
-  position: absolute;
-  right: 10px;
-  top: 70rem;
-  /* transform: translateX(150%); */
-  /* animation: grow 3s infinite; */
-}
-
 @media screen and (min-width: 600px) {
   .fa-bars,
   .fa-solid {
     display: none;
   }
+  .nav-center {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.25rem 2rem;
+  }
   .nav-links {
-    list-style: none;
-    display: block;
+    display: flex;
+    flex-basis: 50%;
+    justify-content: space-evenly;
   }
   .nav-links li {
     display: inline;
     margin: 0;
     list-style: none;
-  }
-  .nav-center {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.25rem 2rem;
   }
 }
 
@@ -195,6 +181,8 @@ a:hover {
 .show {
   display: block;
 }
+
+/* hero */
 
 .hero {
   background: linear-gradient(to left, var(--modal), rgba(0, 0, 0, 0.2)),
@@ -354,10 +342,41 @@ a:hover {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  background-color: var(--primary-color-5);
+
   padding-bottom: 2rem;
   border-radius: 10px;
   border: 2px solid var(--primary-color-2);
+  margin-bottom: 0.75rem;
+}
+.project-card:nth-child(1) {
+  background: linear-gradient(
+      var(--primary-color-5-light),
+      var(--primary-color-5-light)
+    ),
+    url('./assets/project-car.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.project-card:nth-child(2) {
+  background: linear-gradient(
+      var(--primary-color-5-light),
+      var(--primary-color-5-light)
+    ),
+    url('./assets/dogs.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.project-card:nth-child(3) {
+  background: linear-gradient(
+      var(--primary-color-5-light),
+      var(--primary-color-5-light)
+    ),
+    url('./assets/news-1074604_1280.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .project-card:hover {
   box-shadow: 1px 1px 20px var(--primary-color-1);
@@ -410,20 +429,19 @@ label {
   font-size: 0.5rem;
   text-transform: capitalize;
   padding-right: 0.25rem;
+  margin-bottom: 0.75rem;
+  display: block;
+  text-align: start;
+  font-size: var(--font-header);
+  font-weight: bolder;
 }
 
 input {
-  width: 200px;
-  padding: 0.25rem;
-  border-radius: 4px;
-  border: none;
+  padding: 0.5rem;
+  border-radius: 8px;
   outline: none;
-  align-self: flex-end;
-  border: 1px solid var(--primary-color-1);
-}
-
-.form-btn {
-  transform: translateX(10%);
+  border: 2px solid var(--primary-color-3);
+  width: 100%;
 }
 
 @media screen and (min-width: 600px) {
@@ -459,4 +477,18 @@ input {
 /* footer */
 .footer {
   padding: 2rem 0;
+  position: relative;
+}
+.fa-arrow-up {
+  position: absolute;
+  color: black;
+  padding: 2rem;
+  text-align: center;
+  padding: 1rem;
+  font-weight: bolder;
+  font-size: 2rem;
+  right: 10px;
+  bottom: 0;
+  /* transform: translateX(150%); */
+  /* animation: grow 3s infinite; */
 }
